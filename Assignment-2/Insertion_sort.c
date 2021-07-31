@@ -1,8 +1,8 @@
 /*
  *
- * Program to test bubble sort on different data sets.
+ * Program to test insertion sort on different data sets.
  * 
- * Compilation: gcc Bubble_Sort.c
+ * Compilation: gcc Insertion_Sort.c
  * Execution: ./a.out
  * 
  * @author: Rajan, @Roll_Number: 1910990184
@@ -16,42 +16,43 @@
 #include <sys/time.h>
 #include <stdlib.h>
 
-void bubble_sort(int data[], int n); //sorts the data array of lengh n
+void insertion_sort(int data[], int n); //sorts the data array of lengh n
 
 long findTime(int data[], int n); //returns the time to sort the data array of length n
 
-void test_on_sorted(int n); //tests bubble sort on sorted array of size n
+void test_on_sorted(int n); //tests insertion sort on sorted array of size n
 
-void test_on_reversed(int n); //tests bubble sort on reversed array of size n
+void test_on_reversed(int n); //tests insertion sort on reversed array of size n
 
-void test_on_random(int n); //tests bubble sort on random array of size n
+void test_on_random(int n); //tests insertion sort on random array of size n
 
-void bubble_sort(int data[], int n)
+void insertion_sort(int data[], int n)
 {
-    //applying bubble sort
-    for (int i = 0; i < n - 1; i++)
+    //applying insertion sort
+    for (int i = 1; i < n - 1; i++)
     {
-        for (int j = 0; j < n - i - 1; j++)
+        //current element
+        int cur = data[i], j = i;
+
+        //running the loop till the previous numbers are greater than current
+        while (j > 0 && data[j - 1] > cur)
         {
-            if (data[j] > data[j + 1])
-            {
-                //swapping the elements
-                int temp = data[j];
-                data[j] = data[j + 1];
-                data[j + 1] = temp;
-            }
+            data[j] = data[j - 1];
+            j--;
         }
+
+        data[j] = cur;
     }
 }
 
 long findTime(int data[], int n)
 {
-    //computes the time spent in sorting data array by bubble sort
+    //computes the time spent in sorting data array by insertion sort
     struct timeval start, end;
 
     gettimeofday(&start, NULL);
 
-    bubble_sort(data, n);
+    insertion_sort(data, n);
 
     gettimeofday(&end, NULL);
 
