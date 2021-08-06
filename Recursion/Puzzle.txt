@@ -1,0 +1,15 @@
+Basic Idea:
+Consider i-th prisoner as i-th bit of a number. So, in this way ten prisoners can represent 1024 bottle numbers.
+
+Explanation:
+
+We can consider 10 prisoners as 10 bits of a binary number.
+
+And as 2^10-1=1024. So, these 10 prisoners can identify 1024 individual bottles.
+
+Here, we have only 1000 bottles.
+Let's write all numbers from 1 to 1000 in binary form(which will contain atmost 10 bits).
+Now, if the i-th bit is 1 in a bottle number, give this bottle to ith prisoner to drink
+
+When the prisoners die, note their number and make a binary number with having their bits numbers as 1.
+The resultant binary number will be the poisned bottle number.
