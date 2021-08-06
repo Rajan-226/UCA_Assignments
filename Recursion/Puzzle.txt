@@ -5,7 +5,7 @@ Explanation:
 
 We can consider 10 prisoners as 10 bits of a binary number.
 
-And as 2^10-1=1024. So, these 10 prisoners can identify 1024 individual bottles.
+And as 2^10=1024. So, these 10 prisoners can identify 1024 individual bottles.
 
 Here, we have only 1000 bottles.
 Let's write all numbers from 1 to 1000 in binary form(which will contain atmost 10 bits).
