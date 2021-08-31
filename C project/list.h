@@ -1,0 +1,46 @@
+
+/*
+ *
+ * Implementation of a singly linked list with linear search operation
+ * 
+*/
+
+#include <stdlib.h>
+#include <string.h>
+
+struct listNode
+{
+    struct listNode *next;
+    char *data;
+};
+
+struct listNode *head = NULL;
+
+//Returns 1 if value is found in the list, else 0
+//Time complexity : O(N)
+int isPresent(char *value)
+{
+    struct listNode *dummy = head;
+    while (dummy)
+    {
+        //if data of dummy node and value is same
+        if (strcmp(value, dummy->data) == 0)
+            return 1;
+
+        dummy = dummy->next;
+    }
+    return 0;
+}
+
+//Inserts a new value in the list
+//Time complexity : O(1)
+void insert(char *value)
+{
+    struct listNode *newNode = (struct listNode *)malloc(sizeof(struct listNode));
+
+    newNode->data = (char *)malloc(sizeof(char) * 10);
+    strcpy(newNode->data, value);
+    newNode->next = head;
+
+    head = newNode;
+}
