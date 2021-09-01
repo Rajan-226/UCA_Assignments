@@ -12,8 +12,8 @@ The project is regarding the solution of [Sliding puzzle](https://en.wikipedia.o
 ## Specifications
 
  - Driver.c is the main C language program which takes input from user and finds the the minimum number of moves.
- - list.h is the header file for adding the visited states of game to a singly linked list with a linear seach operation.
- - queue.h is the header file for queue data structure implemented using singly linked list with node of a queue containing information about the parent state.
+ - list.c is the C file for adding the visited states of game to a singly linked list with a linear seach operation.
+ - queue.c is the C file for queue data structure implemented using singly linked list with node of a queue containing information about the parent state.
 
 ## Design
 
