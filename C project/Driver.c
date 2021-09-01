@@ -7,8 +7,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "queue.h"
-#include "list.h"
+#include "queue.c"
+#include "list.c"
 
 //----------------------------------global variables-----------------------------
 
@@ -65,7 +65,7 @@ void takeInput()
             //if any invalid value is added to grid
             if (input[i][j] >= rowSize * colSize)
             {
-                printf("\n\nInvalid Number");
+                printf("\nInvalid Number\n");
                 exit(0);
             }
 
@@ -254,7 +254,7 @@ int main()
                 printf("\nMoving %d to reach next state:\n", startNode->valMoved);
             }
         }
-        printf("Press any key to end the program");
+        printf("Press any key to end the program\n");
         getch();
     }
 }
