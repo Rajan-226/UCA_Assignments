@@ -7,8 +7,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "queue.c"
-#include "list.c"
+#include <string.h>
+#include "queue.h"
+#include "list.h"
 
 //----------------------------------global variables-----------------------------
 
@@ -244,7 +245,6 @@ int main()
         while (startNode != NULL)
         {
             printMatrixFromString(startNode->val);
-            int toMove = startNode->valMoved;
             startNode = startNode->parent;
 
             if (startNode)

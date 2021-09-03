@@ -1,18 +1,11 @@
-
 /*
  *
  * Implementation of a singly linked list with linear search operation
  * 
 */
-
 #include <stdlib.h>
 #include <string.h>
-
-struct listNode
-{
-    struct listNode *next;
-    char *data;
-};
+#include "list.h"   
 
 struct listNode *head = NULL;
 

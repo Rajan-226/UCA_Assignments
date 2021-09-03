@@ -7,24 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
-
-//node of tree-linked list
-struct tempNode
-{
-    struct tempNode *next; //pointer to next node of the list
-    struct tempNode *parent;
-    char *val;    //value contained by the node
-    int valMoved; //value moved to occupy the empty space
-};
-
-typedef struct tempNode queueNode;
-
-typedef struct
-{
-    queueNode *front; //front of the queue
-    queueNode *rear;  //rear of the queue
-    int size;
-} Queue;
+#include "queue.h"
 
 Queue *q;
 
