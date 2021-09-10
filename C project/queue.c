@@ -11,10 +11,10 @@
 //node of tree-linked list
 struct tempNode
 {
-    struct tempNode *next; //pointer to next node of the list
-    struct tempNode *parent;
-    char *val;    //value contained by the node
-    int valMoved; //value moved to occupy the empty space
+    struct tempNode *next;   //pointer to next node of the list
+    struct tempNode *parent; //parent node of this node to be pushed to queue
+    char *val;               //value contained by the node
+    int valMoved;            //value moved to occupy the empty space
 };
 
 typedef struct tempNode queueNode;

@@ -8,10 +8,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+//node of singly linked list
 struct listNode
 {
-    struct listNode *next;
-    char *data;
+    struct listNode *next; //next node linked to current node
+    char *data;            //string state contained by the list
 };
 
 struct listNode *head = NULL;

@@ -39,23 +39,24 @@ void swap(char *a, char *b)
 //-------------------------To take the user input initially------------------------
 void takeInput()
 {
-    printf("Enter the number of rowSize: ");
+    printf("\nEnter the number of rows: ");
     scanf("%d", &rowSize);
-    printf("Enter the number of colSize: ");
+    printf("\nEnter the number of columns: ");
     scanf("%d", &colSize);
 
     if (rowSize * colSize > 9)
     {
-        printf("Grid size is too big\n");
-        return;
+        printf("\nGrid size is too big\n");
+        exit(0); //To end the program
     }
 
     //array to check if any number is visited greater than once
     int countOccurence[rowSize * colSize];
     memset(countOccurence, 0, sizeof(countOccurence));
 
-    printf("Enter the initial grid with %d rowSize and %d colSize\n", rowSize, colSize);
+    printf("\nEnter the initial grid with %d rowSize and %d colSize\n", rowSize, colSize);
     printf("(Only distinct numbers between 1-%d and a 0 to represent an empty space)\n\n", rowSize * colSize - 1);
+
     for (int i = 0; i < rowSize; i++)
     {
         for (int j = 0; j < colSize; j++)
@@ -183,6 +184,7 @@ int minimumMoves()
 {
     //initializing queue and adding the initialState
     initializeQueue();
+
     enqueue(initialState, -1, NULL);
     insert(initialState);
 
@@ -254,6 +256,7 @@ int main()
                 printf("\nMoving %d to reach next state:\n", startNode->valMoved);
             }
         }
+
         printf("Press any key to end the program\n");
         getch();
     }
