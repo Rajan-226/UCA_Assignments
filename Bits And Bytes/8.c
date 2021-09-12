@@ -17,13 +17,13 @@
 */
 int invert(int x, int p, int n)
 {
-    return x ^ (((1 << n) - 1) << p);
+    return x ^ (((1 << n) - 1) << (p - n));
 }
 /*
  *
  * (1<<n)-1 will give n number of 1 bits
  * 
- * ((1 << n) - 1)<<p  will shift all the bits to start at pth bit
+ * ((1 << n) - 1)<<(p - n)  will shift all the bits to start at pth bit
  * 
  * And then xoring it with x will flip all the bits in p to p+n range
  * 
